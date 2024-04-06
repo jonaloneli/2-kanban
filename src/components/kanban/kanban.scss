@@ -1,21 +1,39 @@
-.kanban{
+// Define estilos para el componente de tablero kanban
+.kanban {
+    // Utiliza un diseño de caja flexible para organizar los elementos secundarios en una línea
     display: flex;
-    align-items: flex-start;
-    &_section{
+    align-items: flex-start; // Alinea los elementos secundarios al principio del eje transversal
+
+    // Estilos para cada sección del tablero kanban
+    &_section {
+        // Establece el ancho de cada sección
         width: 400px;
+        // Define el color de fondo de cada sección
         background-color: #383838;
+        // Agrega relleno alrededor de cada sección
         padding: 10px;
+        // Aplica bordes redondeados a cada sección
         border-radius: 10px;
-        & ~ &{
+
+        // Estilos para cada sección excepto la primera
+        & ~ & {
+            // Agrega un margen izquierdo para crear espacio entre columnas
             margin-left: 10px;
         }
-        &_title{
+
+        // Estilos para el título de cada sección
+        &_title {
+            // Establece el tamaño y el peso de la fuente del título
             font-size: 1.2rem;
             font-weight: 700;
-            margin: 10px 0 20px;
+            // Agrega márgenes al título para espaciarlo del contenido
+            margin: 10px 0 20px; // margen arriba, margen derecho/izquierdo, margen abajo
         }
-        &_content{
-            & > * ~ *{
+
+        // Estilos para el contenido de cada sección
+        &_content {
+            // Aplica un margen superior entre elementos secundarios del contenido
+            & > * ~ * {
                 margin-top: 10px;
             }
         }

@@ -1,12 +1,16 @@
+// Importa la función v4 de la librería UUID para generar identificadores únicos
 import { v4 as uuidv4 } from "uuid";
+
+// Define un conjunto de datos de ejemplo para inicializar el tablero kanban
 const mockData = [
   {
-    id: uuidv4(),
-    title: "🗒️ Por hacer",
-    tasks:[
+    // Crea un objeto para la primera columna "Por hacer"
+    id: uuidv4(), // Genera un identificador único para la columna
+    title: "🗒️ Por hacer", // Título de la columna
+    tasks:[ // Lista de tareas dentro de la columna
         {
-            id:uuidv4(),
-            title: "Estudiar React js"
+            id:uuidv4(), // Genera un identificador único para la tarea
+            title: "Estudiar React js" // Título de la tarea
         },
         {
             id:uuidv4(),
@@ -19,9 +23,10 @@ const mockData = [
     ]
   },
   {
-    id: uuidv4(),
-    title: "🖋️ En progreso",
-    tasks:[
+    // Crea un objeto para la segunda columna "En progreso"
+    id: uuidv4(), // Genera un identificador único para la columna
+    title: "🖋️ En progreso", // Título de la columna
+    tasks:[ // Lista de tareas dentro de la columna
         {
             id:uuidv4(),
             title: "Curso React codigo369"
@@ -37,9 +42,10 @@ const mockData = [
     ]
   },
   {
-    id: uuidv4(),
-    title: "✅ Completado",
-    tasks:[
+    // Crea un objeto para la tercera columna "Completado"
+    id: uuidv4(), // Genera un identificador único para la columna
+    title: "✅ Completado", // Título de la columna
+    tasks:[ // Lista de tareas dentro de la columna
         {
             id:uuidv4(),
             title: "Curso Sap Abab"
@@ -56,4 +62,5 @@ const mockData = [
   },
 ];
 
-export default mockData
+// Exporta el conjunto de datos de ejemplo
+export default mockData;
